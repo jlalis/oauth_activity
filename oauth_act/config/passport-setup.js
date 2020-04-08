@@ -9,7 +9,7 @@ passport.serializeUser((user, done)=>{
 
 passport.deserializeUser((id, done)=>{
     //Who's id is this?
-    User.query(`select row_to_json (u) from ( SELECT "oauth".findById(${id}) as user) u;`,(err,res)=>{
+    User.query(`select row_to_json (u) from ( SELECT "oauth".findById(100382286691206669790) as user) u;`,(err,res)=>{
         if(err){
             console.log(err);
         }else{                        
